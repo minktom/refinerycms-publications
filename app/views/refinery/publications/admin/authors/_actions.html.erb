@@ -1,0 +1,28 @@
+<ul>
+  <% if ::Refinery::Publications::Admin::AuthorsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.publications_admin_authors_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_publications_admin_author_path,
+                 :class => "add_icon" %>
+  </li>
+  <li>
+    <%= link_to t('.go_to_items'), refinery.publications_admin_items_path, :class => 'go_icon' %>
+  </li>
+<% if !searching? && ::Refinery::Publications::Admin::AuthorsController.sortable? && ::Refinery::Publications::Author.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Authors"),
+                 refinery.publications_admin_authors_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Authors"),
+                 refinery.publications_admin_authors_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

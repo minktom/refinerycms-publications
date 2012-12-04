@@ -1,0 +1,60 @@
+<%= form_for [refinery, :publications_admin, @item] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @item,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest'  -%>
+
+  </div>
+
+  <div class='field'>
+    <%= f.label :authors -%>
+    <%= f.collection_select :author_ids, Refinery::Publications::Author.all, :id, :name, {selected: @item.author_ids, include_blank: true}, {multiple: true, size: 10} %>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :abstract_url -%>
+    <%= f.text_field :abstract_url  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :abstract -%>
+    <%= render '/refinery/admin/resource_picker',
+               :f => f,
+               :field => :abstract_id,
+               :resource => @item.abstract %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :published_at -%>
+    <%= f.date_select :published_at  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :published_in -%>
+    <%= f.text_field :published_in  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :published_url -%>
+    <%= f.text_field :published_url  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :published_note -%>
+    <%= f.text_field :published_note  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.publications.admin.publications.item'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @item.title) %>
+<% end -%>

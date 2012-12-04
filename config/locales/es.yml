@@ -1,0 +1,55 @@
+es:
+  refinery:
+    plugins:
+      publications:
+        title: Publications
+    publications:
+      admin:
+        authors:
+          actions:
+            create_new: Crear nuevo author
+            reorder: Reordenar authors
+            reorder_done: Reordenación de authors completada
+          records:
+            title: Authors
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay authors todavía. Pulsa en "Crear nuevo Author" para
+              crear tu primer author.
+          author:
+            view_live_html: Ver este author como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este author
+            delete: Borrar este author para siempre
+        items:
+          actions:
+            create_new: Crear nuevo publication
+            reorder: Reordenar publications
+            reorder_done: Reordenación de publications completada
+          records:
+            title: Publications
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay publications todavía. Pulsa en "Crear nuevo Publication"
+              para crear tu primer publication.
+          item:
+            view_live_html: Ver este publication como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este publication
+            delete: Borrar este publication para siempre
+      authors:
+        show:
+          other: Otros authors
+      publications:
+        show:
+          other: Otros publications
+  activerecord:
+    attributes:
+      refinery/publications/author:
+        name: Name
+        url: Url
+      refinery/publications/item:
+        title: Title
+        abstract_url: Abstract Url
+        published_at: Published At
+        published_in: Published In
+        published_url: Published Url
+        published_note: Published Note

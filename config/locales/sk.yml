@@ -1,0 +1,54 @@
+sk:
+  refinery:
+    plugins:
+      publications:
+        title: Publications
+    publications:
+      admin:
+        authors:
+          actions:
+            create_new: Pridať Author
+            reorder: Preusporiadať Authors
+            reorder_done: Koniec radenia Authors
+          records:
+            title: Authors
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Authors. Kliknite na "Pridať Author"
+              pre pridanie prvého author.
+          author:
+            view_live_html: Zobraziť náhľad author<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť author
+            delete: Zmazať author
+        items:
+          actions:
+            create_new: Pridať Publication
+            reorder: Preusporiadať Publications
+            reorder_done: Koniec radenia Publications
+          records:
+            title: Publications
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Publications. Kliknite na "Pridať
+              Publication" pre pridanie prvého publication.
+          item:
+            view_live_html: Zobraziť náhľad publication<br/><em>(otvorí sa v novom
+              okne)</em>
+            edit: Upraviť publication
+            delete: Zmazať publication
+      authors:
+        show:
+          other: Daľšie Authors
+      publications:
+        show:
+          other: Daľšie Publications
+  activerecord:
+    attributes:
+      refinery/publications/author:
+        name: Name
+        url: Url
+      refinery/publications/item:
+        title: Title
+        abstract_url: Abstract Url
+        published_at: Published At
+        published_in: Published In
+        published_url: Published Url
+        published_note: Published Note

@@ -1,0 +1,55 @@
+nl:
+  refinery:
+    plugins:
+      publications:
+        title: Publications
+    publications:
+      admin:
+        authors:
+          actions:
+            create_new: Maak een nieuwe Author
+            reorder: Wijzig de volgorde van de Authors
+            reorder_done: Klaar met het wijzingen van de volgorde van de Authors
+          records:
+            title: Authors
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Authors. Druk op 'Maak een nieuwe Author'
+              om de eerste aan te maken.
+          author:
+            view_live_html: Bekijk deze author op de website <br/><em>(opent een nieuw
+              venster)</em>
+            edit: Bewerk deze author
+            delete: Verwijder deze author voor eeuwig
+        items:
+          actions:
+            create_new: Maak een nieuwe Publication
+            reorder: Wijzig de volgorde van de Publications
+            reorder_done: Klaar met het wijzingen van de volgorde van de Publications
+          records:
+            title: Publications
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Publications. Druk op 'Maak een nieuwe
+              Publication' om de eerste aan te maken.
+          item:
+            view_live_html: Bekijk deze publication op de website <br/><em>(opent
+              een nieuw venster)</em>
+            edit: Bewerk deze publication
+            delete: Verwijder deze publication voor eeuwig
+      authors:
+        show:
+          other: Andere Authors
+      publications:
+        show:
+          other: Andere Publications
+  activerecord:
+    attributes:
+      refinery/publications/author:
+        name: Name
+        url: Url
+      refinery/publications/item:
+        title: Title
+        abstract_url: Abstract Url
+        published_at: Published At
+        published_in: Published In
+        published_url: Published Url
+        published_note: Published Note

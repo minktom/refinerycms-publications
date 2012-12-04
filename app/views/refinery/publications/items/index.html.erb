@@ -1,0 +1,26 @@
+<% content_for :body do %>
+  <% @publications.group_by{|p| p.published_at.year}.each do |group, publications| %>
+    <h2><%= group %></h2>
+    <ul id="publications">
+      <% publications.each do |publication| %>
+        <li>
+          <h3><%= publication.title %></h3>
+          <p class="authors"><%= publication.authors.map{|a| a.url.blank? ? a.name : link_to(a.name, a.url) }.join(', ').html_safe %></p>
+          <p>
+            <% unless publication.published_in.blank? %>
+              <%= publication.published_url.blank? ? publication.published_in : link_to(publication.published_in, publication.published_url) %>
+              (<%= publication.published_at.year %>)
+              <%= publication.published_note %>
+            <% end %>
+            <% abstract_url = publication.abstract.try(:url) || publication.abstract_url %>
+            <% unless abstract_url.blank? %>
+              <%= link_to Refinery::Publications::Item.human_attribute_name(:abstract), abstract_url %>
+            <% end %>
+          </p>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
+
+<%= render '/refinery/content_page' %>

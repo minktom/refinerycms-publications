@@ -1,0 +1,54 @@
+en:
+  refinery:
+    plugins:
+      publications:
+        title: Publikációk
+    publications:
+      admin:
+        authors:
+          actions:
+            create_new: Új szerző hozzáadása
+            reorder: Szerzők rendezése
+            reorder_done: Szerzők rendezésének befejezése
+            go_to_items: Ugrás a publikációkhoz
+          records:
+            title: Szerzők
+            sorry_no_results: 'Sajnáljuk! Nics találat.'
+            no_items_yet: 'Jelenleg nincs szerző. Kattints az "Új szerző hozzáadása" linkre, hogy létrehozd az elsőt.'
+          author:
+            view_live_html: View this author live <br/><em>(opens in a new window)</em>
+            edit: Szerző szerkesztése
+            delete: Szerző végleges eltávolítása
+        items:
+          actions:
+            create_new: Új publikáció hozzáadása
+            reorder: Publikációk rendezése
+            reorder_done: Publikációk rendezésének befejezése
+            go_to_authors: Ugrás a szerzőkhöz
+          records:
+            title: Publikációk
+            sorry_no_results: 'Sajnáljuk! Nics találat.'
+            no_items_yet: 'Jelenleg nincs publikáció. Kattints az "Új publikáció hozzáadása" linkre, hogy létrehozd az elsőt.'
+          item:
+            view_live_html: View this publication live <br/><em>(opens in a new window)</em>
+            edit: Publikáció szerkesztése
+            delete: Publikáció végleges eltávolítása
+      authors:
+        show:
+          other: Más Szerzők
+      publications:
+        show:
+          other: Más Publikációk
+  activerecord:
+    attributes:
+      refinery/publications/author:
+        name: Név
+        url: Url
+      refinery/publications/item:
+        title: Cím
+        abstract: Absztrakt
+        abstract_url: Abstract Url
+        published_at: Publikálás dátuma
+        published_in: Publikálás helye
+        published_url: Publikálás helyének Url-je
+        published_note: Megjegyzés

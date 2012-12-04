@@ -1,0 +1,56 @@
+en:
+  refinery:
+    plugins:
+      publications:
+        title: Publications
+    publications:
+      admin:
+        authors:
+          actions:
+            create_new: Add New Author
+            reorder: Reorder Authors
+            reorder_done: Done Reordering Authors
+            go_to_items: Go to Publications
+          records:
+            title: Authors
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Authors yet. Click "Add New Author" to add
+              your first author.
+          author:
+            view_live_html: View this author live <br/><em>(opens in a new window)</em>
+            edit: Edit this author
+            delete: Remove this author forever
+        items:
+          actions:
+            create_new: Add New Publication
+            reorder: Reorder Publications
+            reorder_done: Done Reordering Publications
+            go_to_authors: Go to Authors
+          records:
+            title: Publications
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Publications yet. Click "Add New Publication"
+              to add your first publication.
+          item:
+            view_live_html: View this publication live <br/><em>(opens in a new window)</em>
+            edit: Edit this publication
+            delete: Remove this publication forever
+      authors:
+        show:
+          other: Other Authors
+      publications:
+        show:
+          other: Other Publications
+  activerecord:
+    attributes:
+      refinery/publications/author:
+        name: Name
+        url: Url
+      refinery/publications/item:
+        title: Title
+        abstract: Abstract
+        abstract_url: Abstract Url
+        published_at: Published At
+        published_in: Published In
+        published_url: Published Url
+        published_note: Published Note

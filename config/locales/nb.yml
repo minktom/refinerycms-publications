@@ -1,0 +1,55 @@
+nb:
+  refinery:
+    plugins:
+      publications:
+        title: Publications
+    publications:
+      admin:
+        authors:
+          actions:
+            create_new: Lag en ny Author
+            reorder: Endre rekkefølgen på Authors
+            reorder_done: Ferdig å endre rekkefølgen Authors
+          records:
+            title: Authors
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Authors enda. Klikk på "Lag en ny Author" for
+              å legge til din første author.
+          author:
+            view_live_html: Vis hvordan denne author ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne author
+            delete: Fjern denne author permanent
+        items:
+          actions:
+            create_new: Lag en ny Publication
+            reorder: Endre rekkefølgen på Publications
+            reorder_done: Ferdig å endre rekkefølgen Publications
+          records:
+            title: Publications
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Publications enda. Klikk på "Lag en ny Publication"
+              for å legge til din første publication.
+          item:
+            view_live_html: Vis hvordan denne publication ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne publication
+            delete: Fjern denne publication permanent
+      authors:
+        show:
+          other: Andre Authors
+      publications:
+        show:
+          other: Andre Publications
+  activerecord:
+    attributes:
+      refinery/publications/author:
+        name: Name
+        url: Url
+      refinery/publications/item:
+        title: Title
+        abstract_url: Abstract Url
+        published_at: Published At
+        published_in: Published In
+        published_url: Published Url
+        published_note: Published Note

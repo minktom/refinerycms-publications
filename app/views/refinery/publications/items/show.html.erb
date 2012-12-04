@@ -1,0 +1,57 @@
+<% content_for :body_content_title do %>
+  <%= @publication.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @publication.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Abstract Url</h1>
+    <p>
+      <%=raw @publication.abstract_url %>
+    </p>
+  </section>
+  <section>
+    <h1>Published At</h1>
+    <p>
+      <%=raw @publication.published_at %>
+    </p>
+  </section>
+  <section>
+    <h1>Published In</h1>
+    <p>
+      <%=raw @publication.published_in %>
+    </p>
+  </section>
+  <section>
+    <h1>Published Url</h1>
+    <p>
+      <%=raw @publication.published_url %>
+    </p>
+  </section>
+  <section>
+    <h1>Published Note</h1>
+    <p>
+      <%=raw @publication.published_note %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="publications">
+      <% @publications.each do |publication| %>
+        <li>
+          <%= link_to publication.title, refinery.publications_publication_path(publication) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
