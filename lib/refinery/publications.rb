@@ -1,4 +1,5 @@
 require 'refinerycms-core'
+require 'chosen-rails'
 
 module Refinery
   autoload :PublicationsGenerator, 'generators/refinery/publications_generator'

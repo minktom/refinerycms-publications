@@ -1,0 +1,11 @@
+/*
+ *= require chosen
+ */
+
+.publication-form #item_author_ids {
+  width: 99%;
+}
+
+#content a.search-choice-close {
+  border: none;
+}
